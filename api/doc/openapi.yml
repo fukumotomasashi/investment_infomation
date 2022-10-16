@@ -1,0 +1,34 @@
+openapi: 3.0.2
+servers:
+  - url: 'http://localhost:3000'
+info:
+  title: investment info apis
+  description: investment info apis
+  version: 1.0.0
+tags:
+  - name: hoge
+    description: smaple
+paths:
+  /hoge:
+    get:
+      summary: hoge
+      tags:
+        - hoge
+      parameters:
+        - name: sample
+          in: header
+          description: hoge
+          schema:
+            type: string
+      responses:
+        '200':
+          description: 成功時
+          content:
+            application/json:
+              schema:
+                description: 成功時の実行結果
+                type: object
+                properties:
+                  hoge:
+                    type: string
+                    example: hoge
